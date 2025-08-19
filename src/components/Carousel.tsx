@@ -11,7 +11,7 @@ export default function Carousel({ movies, setFeatured }: Props) {
 
 	return (
 		<div
-			className="overflow-hidden whitespace-nowrap w-full py-6"
+			className="overflow-hidden whitespace-nowrap w-full py-4"
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 		>
