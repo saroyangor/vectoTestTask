@@ -46,26 +46,22 @@ export default function FeaturedHero({
         </p>
 
         <div className="mt-6 flex gap-3">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <button
             onClick={() => movie.VideoUrl && onPlay(movie.VideoUrl)}
-            className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded-md font-semibold shadow-md transition"
+            className="flex items-center gap-2 bg-white text-black px-12 py-3 rounded-full font-semibold hover:bg-gray-200 transition shadow-lg text-2xl"
           >
             <span className="text-lg">▶</span>
             Play
-          </motion.button>
+          </button>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setShowDescription(true)}
-            className="flex items-center gap-2 bg-white/20 text-white px-6 py-2 rounded-md font-semibold shadow-md transition"
+          <button
+            onClick={() => setShowDescription(!showDescription)}
+            className="px-12 py-2 rounded-full font-semibold text-white transition bg-gradient-to-r from-[#0F4CFF] to-[#001133] hover:opacity-90 text-2xl"
           >
-            <span className="text-lg">ℹ</span>
             More Info
-          </motion.button>
+          </button>
         </div>
+
       </div>
     </motion.section>
   );

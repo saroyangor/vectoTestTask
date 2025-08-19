@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import Sidebar from "./components/Sidebar";
 import FeaturedHero from "./components/FeaturedHero";
-import TrendingCarousel from "./components/TrendingCarousel";
+import Carousel from "./components/Carousel";
 import VideoModal from "./components/VideoModal";
 import raw from "./data.json";
 import type { DataShape, MediaItem } from "./types";
@@ -22,9 +22,10 @@ export default function App() {
     <div className="min-h-screen bg-black overflow-hidden">
       <div className="flex">
         <Sidebar />
-        <main className="flex-1 p-4 overflow-x-hidden">
+        <main className="flex-1 p-4 overflow-x-hidden ml-24">
           <FeaturedHero movie={featured} onPlay={(url) => setVideoUrl(url)} />
-          <TrendingCarousel movies={trending} onSelect={setFeatured} />
+
+          <Carousel movies={trending} setFeatured={setFeatured} />
         </main>
       </div>
 
